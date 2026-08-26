@@ -1,7 +1,3 @@
-<div align="center">
-  <img height="200" src="https://raw.githubusercontent.com/glaugm/github-assets/main/foto_github_v2.png" alt="Glaucia Messias" />
-</div>
-
 <h1 align="center">
   👩🏻‍💻 Glaucia Messias<br>
   Senior QA Analyst | QA Automation
