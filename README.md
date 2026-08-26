@@ -16,7 +16,7 @@
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cucumber/cucumber-plain.svg" height="60" alt="Cucumber" />
   <img width="12" />
 
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" height="60" alt="GitHub" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original-wordmark.svg" height="60" alt="GitHub" />
   <img width="12" />
 
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" height="60" alt="Git" />
@@ -55,8 +55,9 @@
 
 <br>
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/glaugm/glaugm/pacman-output/pacman-contribution-graph-dark.svg?game=pacman">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/glaugm/glaugm/pacman-output/pacman-contribution-graph.svg?game=pacman">
-  <img alt="Pacman contribution graph" src="https://raw.githubusercontent.com/glaugm/glaugm/pacman-output/pacman-contribution-graph.svg?game=pacman">
-</picture>
+<div align="center">
+  <img
+    src="https://raw.githubusercontent.com/glaugm/glaugm/pacman-output/pacman-contribution-graph-dark.svg?game=pacman"
+    alt="Pacman contribution graph"
+  />
+</div>
