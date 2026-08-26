@@ -11,16 +11,18 @@ on:
       - main
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-
+  generate:
     permissions:
       contents: write
 
-    steps:
-      - uses: actions/checkout@v6
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
 
-      - name: Generate stats card
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Generate stats.svg
         uses: stats-organization/github-readme-stats-action@v2
         with:
           card: stats
@@ -28,10 +30,18 @@ jobs:
           path: profile/stats.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Commit stats card
+      - name: Generate top-langs.svg
+        uses: stats-organization/github-readme-stats-action@v2
+        with:
+          card: top-langs
+          options: username=${{ github.repository_owner }}&locale=en&hide_title=false&layout=compact&card_width=320&langs_count=5&theme=blueberry&hide_border=true&custom_title=Languages%20%26%20Tools
+          path: profile/top-langs.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Commit cards
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add profile/stats.svg
+          git add profile/*.svg
           git commit -m "Update GitHub stats" || exit 0
           git push
